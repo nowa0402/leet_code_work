@@ -9,11 +9,10 @@
 
 
 def strStr(haystack: str, needle: str) -> int:
-    print(haystack.find(needle))
-    # 最初に見つかったインデックスを返却
-    # 一致しなければ-1を返却する
-    return haystack.find(needle)
+    if needle in haystack:
+        return haystack.index(needle)
+    return -1
 
 
-strStr("sadbutsad", "sad")
-strStr("leetcode", "leeto")
+print(strStr("sadbutsad", "sad"))
+print(strStr("leetcode", "leeto"))
